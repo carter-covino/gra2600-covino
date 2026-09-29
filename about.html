@@ -1,0 +1,98 @@
+<!doctype html> <!-- Declares this document as HTML5 so browsers render it in standards mode -->
+
+<html lang="en"> <!-- Root element of the page; lang="en" tells browsers and screen readers the language -->
+
+ <head> <!-- Metadata container: information ABOUT the page, not content shown on the page -->
+
+  <meta charset="utf-8" /> <!-- Character encoding for readable text -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Enables responsive layout -->
+
+  <title>About Me</title> <!-- Page title shown in browser tab and search results -->
+
+  <link rel="stylesheet" href="css/styles.css" /> <!-- Global stylesheet for site-wide styling -->
+
+  <style>
+    .hero-image{
+      background-image: url("/assets/hero/open-book.jpg");
+    }
+    </style>
+
+  <script src="js/includes.js" defer></script> <!-- Deferred JS for future header/footer injection -->
+
+ </head>
+
+ <body>
+
+  <!-- SITE HEADER Role: Contains site identity and primary navigation.
+
+   This section will eventually be moved into includes/header.html and injected using JavaScript. -->
+  <header id="site-header" class="site-header"> <!-- Semantic role: site-wide header --> </header>
+ <div class="hero-image">
+<h1>About Me</h1>
+    </div>
+</section>
+
+<div class="container-cool">
+  <main class="container"> <!-- Semantic role: main content unique to this page -->
+
+
+   <h1 class="redone">Introduction</h1> <!-- Primary page heading -->
+
+
+   <p>Hello my name is Carter Covino, I have lived in connecticut my entire life. I like video games and programming, although I don't indulge in them as much as I like. <br>
+     I live with my mom, my little brother, and one of my three sisters. I have people who I like to talk to frequently online, although I don't go out as much as I really should </p> <!-- Body paragraph -->
+
+     <p>
+        I am attending Connecticut Community College right now, and I plan to transfer to a new school once I complete my transfer degree.
+        </p>
+
+        <h1> Projects I'm working on </h1>
+    <section class="flex-demo">
+ 
+  <div class="card">
+    <img src="/assets/cards/girl-laptop.jpg" alt="A picture of a person at their laptop on a website.">
+    <h4>Website</h4>
+    <p>I'm making the very website you're looking at right now.</p>
+    <a href="about.html" class="button">Learn more</a>
+  </div>
+ 
+  
+  <div class="card">
+    <img src="/assets/cards/game-tv.jpg" alt="a picture of two people holding controllers playing a sports game.">
+    <h4>Game Design</h4>
+    <p>I make attempts at making games of my very own.</p>
+    <a href="about.html" class="button">Learn more</a>
+  </div>
+
+  
+  <div class="card">
+    <img src="/assets/cards/satanic-symbol.jpg" alt="a picture of a stone engraving of a goat on top of a pentagram, there is red around the goat.">
+    <h4>The Ritual</h4>
+    <p>Eternal Youth! With our ritual nobody will be able to look away.</p>
+    <a href="about.html" class="button">Learn more</a>
+  </div>
+
+  
+  <div class="card">
+    <img src="/assets/cards/cleaning-room.jpg" alt="A picture of two people cleaning up a living room.">
+    <h4>Basement</h4>
+    <p>I'm cleaning up my basement. It's going well.</p>
+    <a href="about.html" class="button">Learn more</a>
+  </div>
+  <!-- copy the card div 3 to 5 more times -->
+ 
+</section>
+
+  
+    </main>
+</div>
+
+  <!-- SITE FOOTER Role: Contains secondary information (copyright, secondary links). Will also be extracted into an include later. -->
+
+  <footer id="site-footer" class="site-footer">
+  </footer>
+
+ </body>
+
+</html>

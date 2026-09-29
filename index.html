@@ -1,0 +1,93 @@
+<!doctype html> <!-- Declares this document as HTML5 so browsers render it in standards mode -->
+
+<html lang="en"> <!-- Root element of the page; lang="en" tells browsers and screen readers the language -->
+
+ <head> <!-- Metadata container: information ABOUT the page, not content shown on the page -->
+
+  <meta charset="utf-8" /> <!-- Character encoding for readable text -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Enables responsive layout -->
+
+  <title>Development Logs</title> <!-- Page title shown in browser tab and search results -->
+
+  <link rel="stylesheet" href="css/styles.css" /> <!-- Global stylesheet for site-wide styling -->
+
+  <style>
+    .hero-image{
+      background-image: url("/assets/hero/man-looking-at-computer.jpg");
+    }
+    </style>
+
+  <script src="js/includes.js" defer></script> <!-- Deferred JS for future header/footer injection -->
+
+ </head>
+
+ <body>
+
+  <!-- SITE HEADER Role: Contains site identity and primary navigation.
+
+   This section will eventually be moved into includes/header.html and injected using JavaScript. -->
+  <header id="site-header" class="site-header"> <!-- Semantic role: site-wide header --> </header>
+  
+   <div class="hero-image">
+<h1>Welcome to My Website</h1>
+   </div>
+ 
+</section>
+
+<section class="grid-demo">
+ 
+  <div class="card">
+    <img src="/assets/old/game.png" alt="a cartoony picture of a person running up to another person with the text 'GAME' at the bottom">
+    <h4>Game A</h4>
+    <p>Game A download.</p>
+    <a href="game-a.html" class="button">Visit Site</a>
+  </div>
+
+  
+  <div class="card">
+    <img src="/assets/old/game2.png" alt="a slightly edited cartoony picture of an angry person running up to another angry person that has a bomb with the text 'GAME 2' at the bottom">
+    <h4>Game B</h4>
+    <p>Game B download.</p>
+    <a href="game-b.html" class="button">Visit Site</a>
+  </div>
+
+  
+  <div class="card">
+    <img src="/assets/hero/women-looking-at-computer.jpg" alt="A house burning down, it is in a terrible state">
+    <h4>Dev Logs</h4>
+    <p>History of my development journey.</p>
+    <a href="development-log.html" class="button">Visit Site</a>
+  </div>
+
+  
+  <div class="card">
+    <img src="/assets/hero/making-a-painting.jpg" alt="A picture of a woman in a robber costume with a bag and a toy gun">
+    <h4>Misc Projects</h4>
+    <p>My other projects.</p>
+    <a href="misc-projects.html" class="button">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="/assets/hero/open-book.jpg" alt="A picture of a cake with colorful frosting and party decor around the cake">
+    <h4>About Me</h4>
+    <p>Learn a Little about me, the creator of this website.</p>
+    <a href="about.html" class="button">Visit Site</a>
+  </div>
+
+  <div class="card">
+    <img src="/assets/hero/fountain-pen-writing-letter.jpg" alt="a picture of colorful oil paint">
+    <h4>Contact</h4>
+    <p>Find my contact information.</p>
+    <a href="contact.html" class="button">Visit Site</a>
+  </div>
+</section>
+
+  <!-- SITE FOOTER Role: Contains secondary information (copyright, secondary links). Will also be extracted into an include later. -->
+
+  <footer id="site-footer" class="site-footer">
+  </footer>
+
+ </body>
+
+</html>

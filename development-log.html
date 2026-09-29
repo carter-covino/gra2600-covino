@@ -1,0 +1,93 @@
+<!doctype html> <!-- Declares this document as HTML5 so browsers render it in standards mode -->
+
+<html lang="en"> <!-- Root element of the page; lang="en" tells browsers and screen readers the language -->
+
+ <head> <!-- Metadata container: information ABOUT the page, not content shown on the page -->
+
+  <meta charset="utf-8" /> <!-- Character encoding for readable text -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Enables responsive layout -->
+
+  <title>Development Logs</title> <!-- Page title shown in browser tab and search results -->
+
+  <link rel="stylesheet" href="css/styles.css" /> <!-- Global stylesheet for site-wide styling -->
+
+  <style>
+    .hero-image{
+      background-image: url("/assets/hero/women-looking-at-computer.jpg");
+    }
+    </style>
+
+  <script src="js/includes.js" defer></script> <!-- Deferred JS for future header/footer injection -->
+
+ </head>
+
+ <body>
+
+  <!-- SITE HEADER Role: Contains site identity and primary navigation.
+
+   This section will eventually be moved into includes/header.html and injected using JavaScript. -->
+  <header id="site-header" class="site-header"> <!-- Semantic role: site-wide header --> </header>
+  
+   <div class="hero-image">
+<h1>Development Logs</h1>
+   </div>
+ 
+</section>
+
+<section class="grid-demo">
+ <div class="card">
+    <img src="/assets/cards/cake-birthday.jpg" alt="A picture of a cake with colorful frosting and party decor around the cake">
+    <h4>9/28 Dev log</h4>
+    <p>Approaching completion of the project. Announcing a new project.</p>
+    <a href="about.html" class="button">View Log</a>
+  </div>
+ 
+  
+  <div class="card">
+    <img src="/assets/cards/immunizations-bacteria.jpg" alt="a cartoony picture of a bunch of bacteria with a big crossed out circle on top">
+    <h4>9/21 Dev Log</h4>
+    <p>Fixing multiple bugs and dealing with with virus attacks.</p>
+    <a href="about.html" class="button">View Log</a>
+  </div>
+
+  
+  <div class="card">
+    <img src="/assets/cards/woman-beauty.jpg" alt="A picture of a woman with make up on in front of a forest">
+    <h4>9/14 Dev Log</h4>
+    <p>Adding final character models and voice acting.</p>
+    <a href="about.html" class="button">View Log</a>
+  </div>
+
+  
+  <div class="card">
+    <img src="/assets/cards/burning-house-sad.jpg" alt="A house burning down, it is in a terrible state">
+    <h4>9/7 Dev Log</h4>
+    <p>Adding dramatic scenes to the climactic portions of the game.</p>
+    <a href="about.html" class="button">View Log</a>
+  </div>
+
+  
+  <div class="card">
+    <img src="/assets/cards/girl-thief.jpg" alt="A picture of a woman in a robber costume with a bag and a toy gun">
+    <h4>8/31 Dev Log</h4>
+    <p>Stealing all of the code from someone else. Also stealing other stuff.</p>
+    <a href="about.html" class="button">View Log</a>
+  </div>
+
+  <div class="card">
+    <img src="/assets/cards/oil-color-paint.jpg" alt="a picture of colorful oil paint">
+    <h4>8/24 Dev Log</h4>
+    <p>Adding new colors to the game.</p>
+    <a href="about.html" class="button">View Log</a>
+  </div>
+</section>
+
+  <!-- SITE FOOTER Role: Contains secondary information (copyright, secondary links). Will also be extracted into an include later. -->
+
+  <footer id="site-footer" class="site-footer">
+  </footer>
+
+ </body>
+
+</html>

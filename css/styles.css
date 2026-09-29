@@ -1,0 +1,282 @@
+/* 
+header, nav, main, section, footer,
+ul, li, h1, h2, p, div {
+  border: 1px dashed red;
+}
+  
+ */
+ /*
+.test-box {
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 80px;
+  margin-top: -30px;
+} */
+
+.flex-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
+  align-items: stretch;
+}
+
+.flex-side {
+    float: right;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
+  align-items: stretch;
+}
+
+.grid-demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+  background: rgb(60, 60, 60);
+  border: 2px dotted green;
+  color: white;
+  flex: 0 0 250px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.card-background {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/old/game.png");
+    background-size: cover;
+    background-position: center;
+  border: 2px dotted green;
+  color: white;
+  flex: 0 0 500px;
+  width: 500px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.card-background h4{
+    background: rgba(0, 0, 0, .6);
+    color:#ffffff;
+    padding: 16px 24px;
+    margin-top: 300px;
+}
+ 
+.card img {
+  border-radius: 8px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h4 {
+  margin: 12px 0 6px;
+  font-size: 22px;
+}
+ 
+.card p {
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+div.container-header {
+    background-color: darkslategray;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card button {
+  margin-top: auto;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+a.logo  {
+    color: cadetblue;
+    padding: 5%;
+    font-size: 30px;
+    text-decoration: none;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a.logo:hover {
+    color: cornflowerblue;
+}
+
+a.logo:active {
+    color: aquamarine
+}
+
+ul.navlist {
+  display: flex;
+  gap:24px;
+  /* border: 2px solid blue; */
+  list-style: none;
+  /* padding: 0; */
+  margin: 0;
+  justify-content: center;
+  padding: 10px;
+}
+
+ul.navlist li {
+  /* border: 2px solid green; */
+  padding: 10px 4px;
+    background-color: rosybrown;
+    color:greenyellow;
+    text-transform: lowercase;
+}
+
+ul.navlist li a {
+    text-decoration: none;
+    color: greenyellow;
+    font-weight: 600;
+}
+
+ul.navlist li a:hover {
+    color:chartreuse;
+}
+
+
+ul.navlist li a:active {
+    color:green
+}
+
+body {
+    /* width: 1200px; */
+    margin: 0 auto;
+    background-color: blanchedalmond;
+    /* max-width: 1400px; */
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2,h3,h4,h5,h6{
+    font-family: 'Trebuchet MS';
+    line-height: 1.3;
+    color: blueviolet;
+}
+
+h1.redone{
+    color: red; 
+    font-family: monospace;
+    font-size: 28px;
+}
+
+.hero-image{
+    background-image: url("../assets/old/thumbs-up.jpg");
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* align-items: flex-end; */
+    padding: 4%;
+    /* border: solid green 8px; */
+}
+.hero-image h1{
+    background: rgba(0, 0, 0, .6);
+    color:#ffffff;
+    padding: 16px 24px;
+    margin-top: 300px;
+}
+h1 {
+    color: purple;
+    border: solid blue;
+}
+
+p {
+    color: green;
+    line-height: 40px;
+}
+
+ol.favoriteWebsites{
+    color: red;
+    background-color: gainsboro;
+}
+
+ol.favoriteWebsites li{
+    text-transform: none;
+    font-family: cursive;
+    font-size: 15px;
+}
+/* 
+i didn't style a by themselves but i did with the tag,
+ i hope that is acceptable
+ */
+a.favoriteWebsites:link{
+    color: darkseagreen;
+    text-decoration: none;
+}
+
+a.favoriteWebsites:visited{
+    color: rebeccapurple;
+    text-decoration: line-through;
+}
+
+a.favoriteWebsites:hover{
+    color: seagreen;
+    text-decoration: wavy;
+}
+
+a.favoriteWebsites:active{
+    color: pink;
+    text-decoration: underline;
+}
+
+ul{
+    color:rebeccapurple;
+    margin-top: 4px;
+}
+
+li{
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+ol{
+    color: teal;
+}
+
+button.download-button{
+    background-color: greenyellow;
+    justify-content: center;
+    color: green;
+    font-size: 32px;
+    display: flex;
+    padding: 12px;
+    margin: 3%;
+    margin-left: 1%;
+    cursor:pointer
+}
+
+.button {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: green;
+  color: white;
+  font-family: Georgia, serif;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: darkgreen;
+}
