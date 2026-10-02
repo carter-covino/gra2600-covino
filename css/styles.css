@@ -118,6 +118,76 @@ a.logo:active {
     color: aquamarine
 }
 
+.navlist,
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlist a {
+    display: block;
+    padding: 10px 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.navlist a:hover{
+    background-color: coral;
+}
+
+.navlist a:focus {
+    outline: 2px solid white;
+    outline-offset: -2px;
+}
+
+header {
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: darkslategray;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.has-dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  padding: 6px 0;
+  background-color: darkslategray;
+  border-radius: 6px;
+}
+
+.submenu a {
+  padding: 8px 16px;
+}
+
+.has-dropdown:hover .submenu {
+  display: block;
+}
+
 ul.navlist {
   display: flex;
   gap:24px;
@@ -154,6 +224,7 @@ ul.navlist li a:active {
 
 body {
     /* width: 1200px; */
+    padding-top: 124.76px;
     margin: 0 auto;
     background-color: blanchedalmond;
     /* max-width: 1400px; */
