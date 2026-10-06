@@ -41,7 +41,7 @@ ul, li, h1, h2, p, div {
     display: flex;
     flex-direction: column;
   background: rgb(60, 60, 60);
-  border: 2px dotted green;
+  /* border: 2px dotted green; */
   color: white;
   flex: 0 0 250px;
   box-sizing: border-box;
@@ -54,7 +54,7 @@ ul, li, h1, h2, p, div {
     background-image: url("../assets/old/game.png");
     background-size: cover;
     background-position: center;
-  border: 2px dotted green;
+  /* border: 2px dotted green; */
   color: white;
   flex: 0 0 500px;
   width: 500px;
@@ -224,7 +224,7 @@ ul.navlist li a:active {
 
 body {
     /* width: 1200px; */
-    padding-top: 124.76px;
+    padding-top: 123.76px;
     margin: 0 auto;
     background-color: blanchedalmond;
     /* max-width: 1400px; */
@@ -266,7 +266,7 @@ h1.redone{
 }
 h1 {
     color: purple;
-    border: solid blue;
+    /* border: solid blue; */
 }
 
 p {
