@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Enables responsive layout -->
 
-  <title>Contact Info</title> <!-- Page title shown in browser tab and search results -->
+  <title>Contact Me</title> <!-- Page title shown in browser tab and search results -->
 
   <link rel="stylesheet" href="css/styles.css" /> <!-- Global stylesheet for site-wide styling -->
 
@@ -30,19 +30,30 @@
   <header id="site-header" class="site-header"> <!-- Semantic role: site-wide header --> </header>
   
    <div class="hero-image">
-<h1>Contact</h1>
+<h1>Contact Me</h1>
     </div>
 
 <div class="container-cool">
   <main class="container"> <!-- Semantic role: main content unique to this page -->
-    <h1> How to Contact Me</h1>
-    <ul>
-        <li> Email: Covinocarter3@gmail.com</li>
-        <li> Phone: 555-555-5555</li>
-        <li> Website: <a href="index.html">www.thiswebsite.com</a></li>
-        <li> Home Address : 1000 Defense Pentagon, Washington</li>
-        <li> DNA sequence: ATGCACGTAGCTAGTATAGCAGACTAGATATAGCATATGCAT</li>
-    </ul>
+    <form action=“https://formspree.io/f/mwlvrnbz”, method=“POST”, id="contact-form">
+
+    <p><label for="first-name">First Name</label><input type="text" id="first-name" name="first-name"></p>
+
+    <p><label for=“last-name”>Last Name</label><input type=“text” id=“last-name” name=“last-name”></p>
+
+    <p><label for=“email”>Email</label><input type=“email” id=“email” name=“email” required></p>
+
+    <p><label for=“phone”>Phone</label><input type=“tel” id=“phone” name=“phone”></p>
+
+    <p><label for=“message”>Message</label><textarea id=“message” name=“message” rows=“6” cols=“40”></textarea></p>
+
+    <p><button type=“submit”>Send Message</button></p>
+    
+    
+    
+    
+    
+    </form>
   </main>
 </div>
 
