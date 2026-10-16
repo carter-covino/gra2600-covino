@@ -351,3 +351,54 @@ button.download-button{
 .button:focus {
   background-color: darkgreen;
 }
+
+input:invalid {border: 2px dashed red;}
+input:valid {border: 2px solid black;}
+
+form {
+  max-width:500px;
+  min-width:300px;
+  margin: auto;
+  border: 5px solid rgb(195, 181, 181);
+  background-color: antiquewhite;
+  padding: 25px 0px 25px 25px;
+}
+ 
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  padding-bottom: 1px;
+}
+ 
+input {
+  width: 90%;
+  height: 25px;
+  font-size:20px;
+}
+ 
+textarea {
+  width: 90%;
+}
+ 
+.phone {
+  width: 100px;
+}
+ 
+button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 10px;
+  width: 50%;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+ 
+button:hover {
+  background-color: #b50067;
+  /* border-radius: 20px; */
+   }
+ 
