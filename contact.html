@@ -39,17 +39,59 @@
 
     <p><label for="first-name">First Name</label><input type="text" id="first-name" name="first-name"></p>
 
-    <p><label for="last-name">Last Name</label><input type="text" id="last-name" name="last-name" required></p>
+    <p><label for="last-name">Last Name</label><input type="text" id="last-name" name="last-name" required minlength="2"></p>
 
     <p><label for="email">Email</label><input type="email" id="email" name="email" required></p>
 
     <p><label for="phone">Phone</label><input type="tel" id="phone" name="phone"></p>
 
-    <p><label for="message">Message</label><textarea id="message" name="message" rows="6" cols="40"></textarea></p>
+    <p><label for="message">Message</label><textarea id="message" name="message" rows="6" cols="40" maxlength="300"></textarea></p>
 
+<label for="contents">Why you're sending a message:</label>
+<select name="contents" id="contents">
+    <option value="Fun">Felt like it</option>
+    <option value="Self Important">It's important to me</option>
+    <option value="Website Error">Information about Website Issues</option>
+    <option value="Meanie">I hate you</option>
+
+</select>
+  <fieldset>
+  <legend><br>How you would rate your message:</legend>
+
+  <div class="ratings">
+    <label for="1 Star"> 1 Star 
+    <input type="radio" id="1 Star" name="rating" value="1 Star" checked />
+    </label>
+    
+  </div>
+
+  <div class="ratings"> 
+    <label for="2 Star">2 Star
+    <input type="radio" id="2 Star" name="rating" value="2 Star" />
+    </label>
+  </div>
+
+  <div class="ratings">
+    <label for="2.5 Star">2.5 Star
+    <input type="radio" id="2.5 Star" name="rating" value="2.5 Star" />
+    </label>
+
+  </div>
+    
+  <div class="ratings">
+    <label for="5 Star">5 Star
+    <input type="radio" id="5 Star" name="rating" value="5 Star" />
+    </label>
+  </div>
+</fieldset>
+<div class="ratings">
+  <label for="safety"> I won't hurt you or anybody else
+<input type="checkbox" id="safety" name="safety" value="not murderer" required>
+</label>
+<br>
+</div>
     <p><button type="submit">Send Message</button></p>
-    
-    
+  
     
     
     

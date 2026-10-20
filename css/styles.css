@@ -353,6 +353,7 @@ button.download-button{
 }
 
 input:invalid {border: 2px dashed red;}
+
 input:valid {border: 2px solid black;}
 
 form {
@@ -400,5 +401,29 @@ button {
 button:hover {
   background-color: #b50067;
   /* border-radius: 20px; */
-   }
- 
+}
+
+input:hover{
+  background-color: wheat;
+}
+
+input:focus{
+  background-color: blanchedalmond;
+}
+
+input:invalid{
+background-color: crimson;
+}
+
+div.ratings{
+  border: 2px dotted green;
+  margin: 10px;
+}
+
+div.ratings input 
+{
+display:inline;
+width: 5%;
+border: 5px dotted black;
+border-width: 10px;
+}
