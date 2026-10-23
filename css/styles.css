@@ -234,6 +234,7 @@ body {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
+  position: relative;
 }
 
 h2,h3,h4,h5,h6{
@@ -426,4 +427,127 @@ display:inline;
 width: 5%;
 border: 5px dotted black;
 border-width: 10px;
+}
+
+
+
+.hamburger input {
+    display: none;
+}
+ 
+ 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+ 
+ 
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#nav-toggle {
+    display: none;
+}
+ 
+ 
+/* --- X state: when checkbox is checked --- */
+ 
+ 
+#nav-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#nav-toggle:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+ 
+ 
+/* ============================================
+   MEDIA QUERY — MOBILE (max-width: 768px)
+   ============================================ */
+ 
+ 
+@media (max-width: 768px) {
+ 
+ 
+    .hamburger {
+        display: flex;
+
+        position: absolute;
+
+      top: -10px;
+
+       right: 50px;
+
+       margin-right: 0;
+    }
+ 
+ 
+    nav {
+        display: none;
+    }
+
+    a.logo {
+      padding: 20px
+    }
+ 
+ 
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    body {
+    /* width: 1200px; */
+    padding-top: 40px;
+    /* max-width: 1400px; */
+}
+
+/* Hide nav by default on mobile */
+nav {
+    display: none;
+}
+
+/* Show nav when checkbox is checked */
+#nav-toggle:checked ~ nav {
+    display: block;
+}
+
+/* Manage mobile menu appearance */
+nav {
+    flex-basis: 100%;
+    width: 50%;
+    background-color: rgb(1, 1, 1);
+}
+
+/* Stack nav links vertically */
+ul.navlist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Manage links appearance */
+ul.navlist li a {
+    /* color: blue; */
+}
+header {
+    background-color: transparent;
+}
 }
