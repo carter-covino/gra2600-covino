@@ -517,7 +517,7 @@ border-width: 10px;
 
     body {
     /* width: 1200px; */
-    padding-top: 40px;
+    padding-top: 0px;
     /* max-width: 1400px; */
 }
 
@@ -535,7 +535,9 @@ nav {
 nav {
     flex-basis: 100%;
     width: 50%;
-    background-color: green;
+    background-color: slategray;
+    margin-left: 25%;
+    font-size: 25px;
 }
 
 /* Stack nav links vertically */
@@ -579,7 +581,7 @@ h1{
   /* border: 2px dotted green; */
   color: white;
   flex: 0 0 250px;
-  width: 250px;
+  width: 90%;
   height: 250px;
   box-sizing: content-box;
   padding: 15px;
