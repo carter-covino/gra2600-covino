@@ -537,14 +537,19 @@ nav {
     width: 50%;
     background-color: slategray;
     margin-left: 25%;
-    font-size: 25px;
 }
 
 /* Stack nav links vertically */
 ul.navlist {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
+    font-size: 15px;
+    gap: 6px;
+}
+
+ul.navlist li {
+  padding: 0 0;
 }
 
 /* Manage links appearance */
