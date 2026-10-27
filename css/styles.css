@@ -259,12 +259,14 @@ h1.redone{
     padding: 4%;
     /* border: solid green 8px; */
 }
+
 .hero-image h1{
     background: rgba(0, 0, 0, .6);
     color:#ffffff;
-    padding: 16px 24px;
+    padding: 16px 24px 0px 24px;
     margin-top: 300px;
 }
+
 h1 {
     color: purple;
     /* border: solid blue; */
@@ -533,7 +535,7 @@ nav {
 nav {
     flex-basis: 100%;
     width: 50%;
-    background-color: rgb(1, 1, 1);
+    background-color: green;
 }
 
 /* Stack nav links vertically */
@@ -545,9 +547,49 @@ ul.navlist {
 
 /* Manage links appearance */
 ul.navlist li a {
-    /* color: blue; */
+    color: blue;
 }
 header {
     background-color: transparent;
+    box-shadow: none;
 }
+
+h1{
+  font-size: 20px;
+  height: 40px;
+}
+
+
+.grid-demo {
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+
+.flex-side{
+  float: none;
+}
+
+.card-background {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/old/game.png");
+    background-size: cover;
+    background-position: center;
+  /* border: 2px dotted green; */
+  color: white;
+  flex: 0 0 250px;
+  width: 250px;
+  height: 250px;
+  box-sizing: content-box;
+  padding: 15px;
+}
+
+.card-background h4{
+    background: rgba(0, 0, 0, .6);
+    color:#ffffff;
+    padding: 16px 24px;
+    margin-top: 125px;
+}
+
 }
