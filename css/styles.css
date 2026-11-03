@@ -40,33 +40,12 @@ ul, li, h1, h2, p, div {
 .card {
     display: flex;
     flex-direction: column;
-  background: rgb(60, 60, 60);
+  background: #1A2B2B;
   /* border: 2px dotted green; */
   color: white;
   flex: 0 0 250px;
   box-sizing: border-box;
   padding: 15px;
-}
-
-.card-background {
-    display: flex;
-    flex-direction: column;
-    background-image: url("../assets/old/game.png");
-    background-size: cover;
-    background-position: center;
-  /* border: 2px dotted green; */
-  color: white;
-  flex: 0 0 500px;
-  width: 500px;
-  box-sizing: border-box;
-  padding: 15px;
-}
-
-.card-background h4{
-    background: rgba(0, 0, 0, .6);
-    color:#ffffff;
-    padding: 16px 24px;
-    margin-top: 300px;
 }
  
 .card img {
@@ -84,6 +63,7 @@ ul, li, h1, h2, p, div {
 .card p {
   margin: 0 0 12px;
   line-height: 1.4;
+color: #A7999D;
 }
 
 div.container-header {
@@ -100,6 +80,20 @@ div.container-header {
   border-radius: 8px;
   cursor: pointer;
   font-family: Georgia, serif;
+}
+
+.site-footer {
+  background-color: darkslategray;
+  padding: 1px;
+}
+
+.site-footer div p {
+  color: #F6816E;
+  font-weight: bold;
+}
+
+.site-footer div a{
+  color: #9E4D56;
 }
 
 a.logo  {
@@ -176,7 +170,7 @@ header .container {
   left: 0;
   min-width: 180px;
   padding: 6px 0;
-  background-color: darkslategray;
+  background-color: #2f4f4f;
   border-radius: 6px;
 }
 
@@ -199,22 +193,21 @@ ul.navlist {
   padding: 10px;
 }
 
-ul.navlist li {
+ul.navlist li {   
   /* border: 2px solid green; */
   padding: 10px 4px;
-    background-color: rosybrown;
-    color:greenyellow;
-    text-transform: lowercase;
+    background-color: #FBCDC5;
+    color:#245972;
 }
 
 ul.navlist li a {
     text-decoration: none;
-    color: greenyellow;
+    color: #245972;
     font-weight: 600;
 }
 
 ul.navlist li a:hover {
-    color:chartreuse;
+    color:#218598;
 }
 
 
@@ -226,7 +219,7 @@ body {
     /* width: 1200px; */
     padding-top: 123.76px;
     margin: 0 auto;
-    background-color: blanchedalmond;
+    background-color: #E6F7FC;
     /* max-width: 1400px; */
 }
 
@@ -237,10 +230,10 @@ body {
   position: relative;
 }
 
-h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6{
     font-family: 'Trebuchet MS';
     line-height: 1.3;
-    color: blueviolet;
+    color: #F6816E;
 }
 
 h1.redone{
@@ -267,14 +260,10 @@ h1.redone{
     margin-top: 300px;
 }
 
-h1 {
-    color: purple;
-    /* border: solid blue; */
-}
 
 p {
-    color: green;
-    line-height: 24px;
+    color: #230109;
+    line-height: 20px;
 }
 
 ol.favoriteWebsites{
@@ -317,7 +306,6 @@ ul{
 }
 
 li{
-    text-transform: uppercase;
     margin-top: 6px;
 }
 
@@ -342,7 +330,7 @@ button.download-button{
   margin-top: auto;
   padding: 10px 12px;
   border-radius: 8px;
-  background-color: green;
+  background-color: #218598;
   color: white;
   font-family: Georgia, serif;
   text-align: center;
@@ -350,9 +338,30 @@ button.download-button{
   cursor: pointer;
 }
 
+
+.button-NA {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: grey;
+  color: white;
+  font-family: Georgia, serif;
+  text-align: center;
+  text-decoration: none;
+  cursor:not-allowed;
+
+  /* stolen from  https://stackoverflow.com/questions/69430/is-there-a-way-to-make-text-unselectable-on-an-html-page, which does as you'd imagine. */
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
 .button:hover,
 .button:focus {
-  background-color: darkgreen;
+  background-color: #124954;
 }
 
 input:invalid {border: 2px dashed red;}
@@ -364,7 +373,7 @@ form {
   min-width:300px;
   margin: auto;
   border: 5px solid rgb(195, 181, 181);
-  background-color: antiquewhite;
+  background-color: #CFE8FC;
   padding: 25px 0px 25px 25px;
 }
  
@@ -431,7 +440,16 @@ border: 5px dotted black;
 border-width: 10px;
 }
 
+.showcase{
+  float: right;
+  width: 40%;
+  padding: 2%;
+}
 
+.showcase img{
+  width: 100%;
+  padding: 2%;
+}
 
 .hamburger input {
     display: none;
@@ -484,6 +502,14 @@ border-width: 10px;
    ============================================ */
  
  
+div.bbbpage{
+  margin-bottom: 262px;
+}
+div.aapage {
+  margin-bottom: 259px;
+}
+/* remove at first sign of anything better  */
+
 @media (max-width: 768px) {
  
  
@@ -535,7 +561,7 @@ nav {
 nav {
     flex-basis: 100%;
     width: 50%;
-    background-color: slategray;
+    background-color: darkslategrey;
     margin-left: 25%;
 }
 
@@ -572,31 +598,17 @@ h1{
   gap: 10px;
 }
 
+.showcase {
+  display: flex;
+  margin: auto;
+  float: none;
+  width: 80%;
+  padding: 2%;
+  flex-wrap: wrap;
+}
+
 
 .flex-side{
   float: none;
 }
-
-.card-background {
-    display: flex;
-    flex-direction: column;
-    background-image: url("../assets/old/game.png");
-    background-size: cover;
-    background-position: center;
-  /* border: 2px dotted green; */
-  color: white;
-  flex: 0 0 250px;
-  width: 90%;
-  height: 250px;
-  box-sizing: content-box;
-  padding: 15px;
-}
-
-.card-background h4{
-    background: rgba(0, 0, 0, .6);
-    color:#ffffff;
-    padding: 16px 24px;
-    margin-top: 125px;
-}
-
 }
