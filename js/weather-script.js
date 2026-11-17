@@ -1,28 +1,48 @@
 const weatherContainer = document.getElementById("weather-container");
 const currentConditions = document.getElementById("current-conditions");
+const heroBanner = document.getElementById("hero");
 const apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=41.904&longitude=-72.4698&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,wind_speed_10m_max,weather_code&timezone=auto&wind_speed_unit=mph&temperature_unit=fahrenheit";
 
 function getCondition(code) {
   if (code >= 0 && code <= 1) {
-    return { label: "Sunny", icon: "../assets/weather_icons/sunny-icon.png" };
+    return { label: "Sunny", icon: "./assets/weather_icons/sunny-icon.png", photo: './assets/weather_icons/weather_hero/sunny.jpg'};
   } else if (code >= 2 && code <= 3) {
-    return { label: "Cloudy", icon: "../assets/weather_icons/clouds-icon.png" };
+    return { label: "Cloudy", icon: "./assets/weather_icons/clouds-icon.png", photo: "./assets/weather_icons/weather_hero/clouds.jpg"};
   } else if (code >= 40 && code <= 49) {
-    return { label: "Fog", icon: "../assets/weather_icons/fog-icon.png" };
+    return { label: "Fog", icon: "./assets/weather_icons/fog-icon.png", photo: './assets/weather_icons/weather_hero/fog.jpg'};
   } else if (code >= 50 && code <= 69) {
-    return { label: "Rain", icon: "../assets/weather_icons/rain-icon.png" };
+    return { label: "Rain", icon: "./assets/weather_icons/rain-icon.png", photo: "./assets/weather_icons/weather_hero/rain.jpg"};
   } else if (code >= 70 && code <= 79) {
-    return { label: "Snow", icon: "../assets/weather_icons/snow-icon.png" };
+    return { label: "Snow", icon: "./assets/weather_icons/snow-icon.png", photo: "./assets/weather_icons/weather_hero/snow.jpg"};
   } else if (code >= 80 && code <= 84) {
-    return { label: "Showers", icon: "../assets/weather_icons/rain-icon.png" };
+    return { label: "Showers", icon: "./assets/weather_icons/rain-icon.png", photo: "./assets/weather_icons/weather_hero/rain.jpg"};
   } else if (code >= 85 && code <= 86) {
-    return { label: "Snow showers", icon: "../assets/weather_icons/snow-icon.png" };
+    return { label: "Snow showers", icon: "./assets/weather_icons/snow-icon.png", photo: "./assets/weather_icons/weather_hero/snow.jpg"};
   } else if (code >= 95 && code <= 99) {
-    return { label: "Thunderstorm", icon: "../assets/weather_icons/storm-icon.png" };
+    return { label: "Thunderstorm", icon: "./assets/weather_icons/storm-icon.png", photo: "./assets/weather_icons/weather_hero/storm.jpg"};
   }
 
   // Only runs if no range above matched
   return { label: "Cloudy", icon: "clouds-icon.png" };
+}
+
+function getWind(windSpeed) {
+  if (windSpeed < 10)
+  {
+      return {label: "light", icon: "./assets/weather_icons/wind/light.png"};
+  }
+    else if  (windSpeed < 20)
+    {
+      return {label: "moderate", icon: "./assets/weather_icons/wind/moderate.png"};
+    }
+    else if (windSpeed < 40)
+    {
+      return {label: "strong", icon: "./assets/weather_icons/wind/strong.png"};
+    }
+    else
+    {
+      return {label: "verystrong", icon: "./assets/weather_icons/wind/verystrong.png"};
+    }
 }
 
 
@@ -42,9 +62,10 @@ const nowHeading = document.createElement("h2");
 nowHeading.textContent = "Current conditions";
 
 const currentIcon = document.createElement("img");
-currentIcon.src = "images/" + currentCondition.icon;
+currentIcon.src = currentCondition.icon;
 currentIcon.alt = currentCondition.label;
 currentIcon.classList.add("current-icon");
+
 
 const currentTempText = document.createElement("p");
 currentTempText.textContent = Math.round(currentTemp) + "°F";
@@ -62,7 +83,17 @@ currentConditions.appendChild(currentIcon);
 currentConditions.appendChild(currentTempText);
 currentConditions.appendChild(currentLabel);
 currentConditions.appendChild(todayWind);
+heroBanner.style.backgroundImage = "url('" + currentCondition.photo +"')";
 
+if (currentCondition.label == "Sunny" || currentCondition.label == "Rain" 
+  ||currentCondition.label == "Snow"||currentCondition.label == "Snow showers" 
+  ||currentCondition.label == "Showers" )
+{
+heroBanner.style.color = "#000000";
+// hardcoding? an issue? you must be nuts!
+// if you think about it, it should be the other way around... hm... yeah.......
+// this will stack with the transparent background which i just thought of Myself.
+}
 
     for (let i = 0; i < dates.length; i++) {
       const card = document.createElement("div");
@@ -73,8 +104,10 @@ currentConditions.appendChild(todayWind);
 
       const condition = getCondition(weatherCodes[i]);
 
+      const windSpeed = getWind(maxWinds[i]);
+
 const icon = document.createElement("img");
-icon.src = "images/" + condition.icon;
+icon.src = condition.icon;
 icon.alt = condition.label;
 icon.classList.add("condition-icon");
 
@@ -91,11 +124,17 @@ conditionText.classList.add("condition-label");
       const wind = document.createElement("p");
       wind.textContent = "Max wind: " + maxWinds[i] + " mph";
 
+      const windIcon = document.createElement("img");
+      windIcon.src = windSpeed.icon;
+      windIcon.alt = windSpeed.label;
+      windIcon.classList.add("wind-icon");
+
       card.appendChild(date);
       card.appendChild(icon);
       card.appendChild(maxTemp);
       card.appendChild(minTemp);
       card.appendChild(wind);
+      card.appendChild(windIcon);
 
       weatherContainer.appendChild(card);
     }
