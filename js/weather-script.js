@@ -29,19 +29,19 @@ function getCondition(code) {
 function getWind(windSpeed) {
   if (windSpeed < 10)
   {
-      return {label: "light", icon: "./assets/weather_icons/wind/light.png"};
+      return {label: "light wind", icon: "./assets/weather_icons/wind/light.png"};
   }
     else if  (windSpeed < 20)
     {
-      return {label: "moderate", icon: "./assets/weather_icons/wind/moderate.png"};
+      return {label: "moderate wind", icon: "./assets/weather_icons/wind/moderate.png"};
     }
     else if (windSpeed < 40)
     {
-      return {label: "strong", icon: "./assets/weather_icons/wind/strong.png"};
+      return {label: "strong wind", icon: "./assets/weather_icons/wind/strong.png"};
     }
     else
     {
-      return {label: "verystrong", icon: "./assets/weather_icons/wind/verystrong.png"};
+      return {label: "very strong wind", icon: "./assets/weather_icons/wind/verystrong.png"};
     }
 }
 
